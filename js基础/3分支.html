@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = window.confirm("是否选择午餐");
+        if(a){
+            var b = window.prompt("几个人吃");
+            var  i=1,j=0;
+            var arr=new Array();
+            for(i=1;i<=b;i++){
+                var c= window.prompt("第"+i+"个人叫什么");
+                arr[i]=c;
+            }
+            for(i=1;i<=b;i++){
+                var lun=foo();
+                alert(arr[i]+lun);
+            }
+        }
+        function foo(){
+            var rand=Math.random();
+                if(rand<0.5){
+                    return "吃凉菜";
+                }
+                else{
+                    return "吃粥";
+                }
+        }
+    </script>
+</body>
+</html>

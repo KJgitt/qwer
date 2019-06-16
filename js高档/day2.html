@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .divv{
+            height: 400px;
+            width: 450px;
+            margin: auto;
+        }
+        .div1{
+            height: 300px;
+            width: 400px;
+            background-color: red；
+        }
+        .div2{
+            height: 100px;
+            width: 420px;
+        }
+        .imgg{
+            height: 200px;
+            width:250px;
+            margin-left: 50px;
+        }
+        .img1{
+            height: 100px;
+            width: 100px;
+        }
+        .img2{
+            height: 100px;
+            width: 100px;
+        }
+        .img3{
+            height: 100px;
+            width: 100px;
+        }
+        .img4{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divv">
+        <div class="div1">
+            <img class="imgg" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1952128684,2515219638&fm=26&gp=0.jpg" alt="">
+        </div>
+        <div class="div2">
+            <img class="img1" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1952128684,2515219638&fm=26&gp=0.jpg" alt="">
+            <img class="img2" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561256889&di=a84147c9e2a6093e7d98cc2cbf40025f&imgtype=jpg&er=1&src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20180122%2F15%2F1516605550-HtfTUDdQaq.jpg" alt="">
+            <img class="img3" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561256848&di=874f71aae4758ddfca50f0a8e9c2bd33&imgtype=jpg&er=1&src=http%3A%2F%2Fgss0.baidu.com%2F9vo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F95eef01f3a292df5f1131b07b8315c6035a873cb.jpg" alt="">
+            <img class="img4" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560661753993&di=7ce5538e8df505e1a1cb3c0218bd3930&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181109%2F3a7ceb21723d478cbdc91792c0aec360.jpeg" alt="">
+        </div>
+    </div>
+    <script>
+        var imggg=document.getElementsByClassName("imgg")[0];
+        var img1g=document.getElementsByClassName("img1")[0];
+        var img2g=document.getElementsByClassName("img2")[0];
+        var img3g=document.getElementsByClassName("img3")[0];
+        var img4g=document.getElementsByClassName("img4")[0];
+        img1g.onmouseover=function(e){
+            var a=img1g.getAttribute("src");
+            imggg.setAttribute("src",a);
+            console.log(1);
+        }
+        img2g.onmouseover=function(e){
+            var b=img2g.getAttribute("src");
+            imggg.setAttribute("src",b);
+            console.log(2);
+        }
+        img3g.onmouseover=function(e){
+            var c=img3g.getAttribute("src");
+            imggg.setAttribute("src",c);
+            console.log(3);
+        }
+        img4g.onmouseover=function(e){
+            var d=img4g.getAttribute("src");
+            imggg.setAttribute("src",d);
+            console.log(4);
+        }
+    </script>
+</body>
+
+</html>

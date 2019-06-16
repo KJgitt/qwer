@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cbig {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(97, 105, 102);
+            margin: 0 auto;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .ctex {
+            display: block;
+        }
+
+        .csmall {
+            height: 20px;
+            width: 50px;
+            background-color: rgb(146, 152, 158);
+            margin: 0 auto;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big" class="cbig">
+        <text id="tex" class="ctex">100</text>
+        <button id="small" class="csmall">开始</button>
+    </div>
+
+    <script>
+        var otex = document.getElementById("tex");
+        var i = 100;
+        var falg=false;
+        var osmall = document.getElementById("small");
+        osmall.onclick = function () {
+            if (osmall.textContent == "开始") {
+                osmall.innerText = "暂停";
+                falg=true;
+                var timer = setInterval(function () {
+                    if (i == 0) {
+                        falg=false;
+                        clearInterval(otex);
+                    }
+                    if(falg){
+                        i--;
+                        otex.innerText = i;
+                    }
+                }, 100)
+            }
+            else {
+                osmall.innerText = "开始";
+                falg=false;
+            }
+        }
+    </script>
+</body>
+
+</html>

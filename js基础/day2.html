@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=Math.random();
+        var y=Math.random();
+        var z=x>y?x:y;
+        console.log(z);
+        console.log(x);
+        var today = new Date();
+        var year = today.getFullYear();
+        var y=year%400;
+        var w=year%4;
+        var s=year%100;
+        if((w==0&&s!=0)||y==0){
+            console.log("runnian");
+        }
+        else{
+            console.log("bushirunnian");
+        }
+    </script>
+</body>
+</html>

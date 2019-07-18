@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <style>
+        #par{
+            background-color: yellow;
+        }
+        .active {
+            background-color: red;
+        }
+        .active1{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="tab">
+        <thead>组别</thead>
+        <tr>
+            <td class="cpar">
+                <div  id="par"> 第一组</div>
+            </td>
+        </tr>
+        <tr id="chl-1">
+            <td >李四</td>
+            <td >王二</td>
+        </tr>
+    </table>
+    <script>
+        $("#par").on("click", function () {
+            if ($("div").hasClass("active")) {
+                $("div").removeClass("active");
+            }
+            else {
+                $("div").addClass("active");
+            }
+
+            if ($("#chl-1").hasClass("active1")) {
+                $("#chl-1").removeClass("active1");
+            }
+            else {
+                $("#chl-1").addClass("active1");
+            }
+        })
+    </script>
+</body>
+
+</html>
